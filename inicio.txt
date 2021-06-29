@@ -1,0 +1,31 @@
+Angelo - tutorial de apoio
+Arquivo com algumas dicas para aqueles que já estão com o Git instalado em suas máquinas. Os passos 25 e 26 não são necessários caso tenha iniciado seus trabalhos conforme descrito neste tutorial.
+Os testes passam por:
+Passo 1: criar repositório de trabalho na sua máquina local, por exemplo, crie um repositório chamado Projeto.
+Passo 2: preparar repositório local (Projeto) com git init, git config. Faça: git init; git config user.name <seu_user_name>; git config.email <seu_email>
+Passo 3: criar um arquivo, por exemplo primeiros_passos.txt
+Passo 4: adicionar o arquivo criado e realizar o primeiro commit, faça: git add primeiros_passos.txt; git commit -m "Criado o arquivo primeiros_passos.txt"
+Passo 5: clonar repositório desejado, no caso clone o repositório gitlabfake <endereço do reposiório remoto>: git clone https://github.com/mfake0323/gitlabfake.git
+Passo 6: mudar seu diretório para o diretório clonado há muitas formas de fazer isso,
+a mais fácil é fechar o diretório no VsCode; abrir novamente o folder com o VsCode diretamente no folder Clonado
+Passo 7: verificar a branch que está trabalhando com o comando git branch
+Passo 8: inicie seus trabalhos criando um arquivo teste.
+Passo 9: Adicione e realize um commit neste novo arquivo
+Passo 10: Por fim, para verificar se tudo está ok faça um git push. Confira agora o repositório remoto (no GitHub) pode ser necessário dar um refrash na página. Se seu arquivo estiver no GitHub, você está no comando.
+Passo 11: Se você for da equipe de desenvolvimento recomendamos crie uma nova ou novas branchs para cada módulo que estiver trabalhando. Use o comando git checkout -b <nome_da_branch>. Assim você cria e vai para a branch criada. Nota a branch criada nestes testes recebeu o nome de tutorial - lembre-se disso ok!
+Passo 12: Inicie seus trabalhos nesta branch, por exemplo crie um diretório de trabalho e gere um primeiro arquivo
+Passo 13: Antes de realizar o primeiro push com essa nova branch você deverá usar o seguinte comando: git push --set-upstream origin tutorial (Atenção substitua tutorial pelo nome de sua branch)
+Passo 14: Verifique seu repositório remoto, agora observe que deverá procurar por sua branch, pois ele estará exibindo a branch main por default
+Passo 15: Verifique se está tudo ok, caso sim, atualize o GitHub com o comando <git push>
+Passo 16: Realizado seus trabalhos estando tudo ok, é hora de trazer sua branch para a branch principal para isso use o seguinte comando: git checkout main - você retornará para a branch principal 
+Passo 17: Para verificar se está na branch principal use o comando: git branch (a branhc principal deverá estar destaca normalmente na cor verde e assinalada com o *)
+Passo 18: Na branch main use o comando: git merge <nome de sua branch>
+Passo 19: Realizado o merge verifique se seu repositório esta ok, se as alterações realizadas em sua branch de trabalho foram incorporadas ao histórico da branch main. Lembre-se pode ser necessário realizar um refresh na página
+Passo 20: Estando tudo ok, é hora de deletar sua branch de trabalho e deixar seu repositório limpo, para isso use: git branch -d <nome de sua branch>. Lembre-se você deverá estar na branch main para realizar estas alterações
+Passo 21: Confira se sua branch foi deletada e se seu repositório de trabalho está limpo, use o comando: git branch
+Passo 22: Caso queira deletar sua branch no GitHub, vá até o GitHub, selecione a sua branch, e clique na lixeira, simples assim, você deixará seus repositório local GitHub limpos.
+Passo 23: todos os seus commits realizados na sua branch estarão no histórioco da branch main e você poderá retornará a eles caso precise
+Passo 24: imagine uma situação em que já há algum tempo não acessa seu repositório remoto (GitHub),
+para assegurar que seu repositório local está sincronizado com o remoto faça: git pull. Nota: antes de fazer o git push você precisa ter a certeza de que seu diretório está atualizado com as últimas modificações do seu repositório remoto GitHub, daí a necessidade de usar o git pull para assegurar o sincronismo entre o diretório local e o repositório remoto.
+Passo 25: depedendo da configuração de seu Git poderá ser necessário alterar o nome da branch de master para main, para isso use o comando: git branch -m master main
+Passo 26: apenas se for necessário criar uma barnch remota use o comando: git push -u origin main
